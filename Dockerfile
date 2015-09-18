@@ -11,6 +11,9 @@ RUN apt-get update -yq && \
     apt-get clean -y && \
     apt-get autoremove -y
 
+ADD mongodb.conf /etc/mongodb.conf
+ADD pritunl.conf /etc/pritunl.conf
+
 ADD cmdline.sh /usr/local/bin/cmdline.sh
 
 EXPOSE 1194
